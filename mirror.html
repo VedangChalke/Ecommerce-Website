@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="css/bathroom.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+  <section class="search-results">
+      <h2 class="heading">search results for <span>Bathroom mirrors</span> </h2>
+      <section class="product">
+     
+        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="bath.html"> <img src="IMG/bath1.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Lunar</h2>
+                    <span class="price">₹8,400</span><span class="actual-price">₹12,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <a href="bath1.html"> <img src="IMG/bath2.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Venetian</h2>
+                    <span class="price">₹3,900</span><span class="actual-price">₹6,500</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">35% off</span>
+                    <a href="bath2.html"> <img src="IMG/bath3.jpeg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Prettify</h2>
+                    <span class="price">₹1,300</span><span class="actual-price">₹2,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <a href="bath3.html"> <img src="IMG/bath4.jpeg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Humberto</h2> 
+                    <span class="price">₹9,000</span><span class="actual-price">₹18,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="bath4.html"> <img src="IMG/bath5.jpeg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Echo</h2>
+                    <span class="price">₹17,500</span><span class="actual-price">₹25,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="bath5.html"> <img src="IMG/bath6.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Artstreet</h2>
+                    <span class="price">₹1,300</span><span class="actual-price">₹1,800</span>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+            const getSearchBar = 
+                document.querySelector('#searchBar');
+            const getAllProducts = 
+                document.querySelectorAll('.product-card');
+  
+            getSearchBar.addEventListener('keyup', e => {
+                getAllProducts.forEach(product => {
+                    if (product.innerText.toLowerCase().includes(
+                        e.target.value.toLowerCase())) {
+                        product.style.display = 'block';
+                        return product;
+                    }
+                    else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+  </section>
+
+    <footer></footer>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

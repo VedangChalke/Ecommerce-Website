@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/livingroom.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+  <section class="search-results">
+      <h2 class="heading">search results for <span>TV & Media Furniture</span> </h2>
+      <section class="product">
+     
+        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="IMG/tv2" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Insignia</h2>
+                    <span class="price">₹21,000</span><span class="actual-price">₹30,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="IMG/tv3.jpeg" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">LG</h2>
+                    <span class="price">₹27,000</span><span class="actual-price">₹45,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">35% off</span>
+                    <img src="IMG/tv4" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Samsung</h2>
+                    <span class="price">₹32,500</span><span class="actual-price">₹50,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <img src="IMG/tv7.jpeg" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Amazonfire</h2>
+                    <span class="price">₹20,000</span><span class="actual-price">₹40,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="IMG/tv6.webp" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TCL</h2>
+                    <span class="price">₹21,000</span><span class="actual-price">₹35,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="IMG/tv1" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Vizio</h2>
+                    <span class="price">₹21,000</span><span class="actual-price">₹30,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="IMG/tv6.webp" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">TCL</h2>
+                    <span class="price">₹24,500</span><span class="actual-price">₹35,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="IMG/tv8.jpeg" class="product-thumb" alt="">
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Redmi</h2>
+                    <span class="price">₹42,000</span><span class="actual-price">₹60,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+            const getSearchBar = 
+                document.querySelector('#searchBar');
+            const getAllProducts = 
+                document.querySelectorAll('.product-card');
+  
+            getSearchBar.addEventListener('keyup', e => {
+                getAllProducts.forEach(product => {
+                    if (product.innerText.toLowerCase().includes(
+                        e.target.value.toLowerCase())) {
+                        product.style.display = 'block';
+                        return product;
+                    }
+                    else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+  </section>
+
+    <footer></footer>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/livingroom.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+  <section class="search-results">
+      <h2 class="heading">search results for <span>Sofas & Armchairs</span> </h2>
+      <section class="product">
+     
+        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product.html"> <img src="img/sofu1.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Lush white</h2>
+                    <span class="price">₹63,000</span><span class="actual-price">₹90,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <a href="product1.html"> <img src="img/pop1.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Tan Brown</h2>
+                    <span class="price">₹46,200</span><span class="actual-price">₹77,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">35% off</span>
+                    <a href="product2.html"> <img src="IMG/pop2.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Black Haq</h2>
+                    <span class="price">₹20,200</span><span class="actual-price">₹31,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <a href="product3.html"> <img src="img/pop3.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Grey norm</h2>
+                    <span class="price">₹37,000</span><span class="actual-price">₹74,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product4.html"> <img src="IMG/pop4.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div></a>
+                <div class="product-info">
+                    <h2 class="product-brand">Premiere</h2>
+                    <span class="price">₹25,200</span><span class="actual-price">₹36,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product5.html">  <img src="IMG/pop5.jpg" class="product-thumb" alt=""></a>
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Black L</h2>
+                    <span class="price">₹53,900</span><span class="actual-price">₹77,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product6.html"> <img src="IMG/pop6.jpg" class="product-thumb" alt=""></a> 
+                    <a href="cart.html"><button class="card-btn">add to wishlist</button></a>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Brown L</h2>
+                    <span class="price">₹53,200</span><span class="actual-price">₹76,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+            const getSearchBar = 
+                document.querySelector('#searchBar');
+            const getAllProducts = 
+                document.querySelectorAll('.product-card');
+  
+            getSearchBar.addEventListener('keyup', e => {
+                getAllProducts.forEach(product => {
+                    if (product.innerText.toLowerCase().includes(
+                        e.target.value.toLowerCase())) {
+                        product.style.display = 'block';
+                        return product;
+                    }
+                    else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+  </section>
+
+    <footer></footer>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

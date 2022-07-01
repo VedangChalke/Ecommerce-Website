@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search results</title>
+
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+  <section class="search-results">
+      <h2 class="heading">search results for <span>product</span> </h2>
+      <section class="product">
+     
+        <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                   <a href="product.html"> <img src="img/sofu1.jpg" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <a href="product.html"><img src="img/corner table 4.jpg" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">brand</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">35% off</span>
+                    <a href="product.html"><img src="img/bed2.png" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">white bed</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">50% off</span>
+                    <a href="product.html"><img src="img/sofa 3.png" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">black haq</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product.html"><img src="img/bed 5.png" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">singlybrown</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product.html"><img src="IMG/sofa 6.jpg" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Woodclasico</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product.html"> <img src="IMG/sofa 5.jpg" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Woodclasico</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <a href="product.html"> <img src="IMG/sofa 5.jpg" class="product-thumb" alt=""></a>
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Woodclasico</h2>
+                    <p class="product-short-des">a short line about the product</p>
+                    <span class="price">₹34,300</span><span class="actual-price">₹49,000</span>
+                </div>
+            </div>
+                
+            
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+            const getSearchBar = 
+                document.querySelector('#searchBar');
+            const getAllProducts = 
+                document.querySelectorAll('.product-card');
+  
+            getSearchBar.addEventListener('keyup', e => {
+                getAllProducts.forEach(product => {
+                    if (product.innerText.toLowerCase().includes(
+                        e.target.value.toLowerCase())) {
+                        product.style.display = 'block';
+                        return product;
+                    }
+                    else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+
+  </section>
+
+    <footer></footer>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>
